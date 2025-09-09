@@ -14,6 +14,13 @@
 		FC27B4702E6755F20011EED0 /* MyRideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27B46F2E6755F20011EED0 /* MyRideTests.swift */; };
 		FC27B47A2E6755F20011EED0 /* MyRideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27B4792E6755F20011EED0 /* MyRideUITests.swift */; };
 		FC27B47C2E6755F20011EED0 /* MyRideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27B47B2E6755F20011EED0 /* MyRideUITestsLaunchTests.swift */; };
+		FC7C3D662E708757001FD1A0 /* A_TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3D652E708757001FD1A0 /* A_TextInput.swift */; };
+		FC7C3D682E70877A001FD1A0 /* A_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3D672E70877A001FD1A0 /* A_Button.swift */; };
+		FC7C3D6A2E7087C2001FD1A0 /* M_EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3D692E7087C2001FD1A0 /* M_EmailField.swift */; };
+		FC7C3D6C2E7087DD001FD1A0 /* M_PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3D6B2E7087DD001FD1A0 /* M_PasswordField.swift */; };
+		FC7C3D6E2E7087F4001FD1A0 /* O_LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3D6D2E7087F4001FD1A0 /* O_LoginForm.swift */; };
+		FC7C3D702E708820001FD1A0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3D6F2E708820001FD1A0 /* LoginView.swift */; };
+		FC7C3D722E708902001FD1A0 /* A_Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3D712E708902001FD1A0 /* A_Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		FC27B4752E6755F20011EED0 /* MyRideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC27B4792E6755F20011EED0 /* MyRideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRideUITests.swift; sourceTree = "<group>"; };
 		FC27B47B2E6755F20011EED0 /* MyRideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRideUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FC7C3D652E708757001FD1A0 /* A_TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_TextInput.swift; sourceTree = "<group>"; };
+		FC7C3D672E70877A001FD1A0 /* A_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_Button.swift; sourceTree = "<group>"; };
+		FC7C3D692E7087C2001FD1A0 /* M_EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_EmailField.swift; sourceTree = "<group>"; };
+		FC7C3D6B2E7087DD001FD1A0 /* M_PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_PasswordField.swift; sourceTree = "<group>"; };
+		FC7C3D6D2E7087F4001FD1A0 /* O_LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = O_LoginForm.swift; sourceTree = "<group>"; };
+		FC7C3D6F2E708820001FD1A0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FC7C3D712E708902001FD1A0 /* A_Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +108,8 @@
 		FC27B45D2E6755F10011EED0 /* MyRide */ = {
 			isa = PBXGroup;
 			children = (
+				FC7C3D6F2E708820001FD1A0 /* LoginView.swift */,
+				FC7C3D5F2E70854E001FD1A0 /* Components */,
 				FC27B45E2E6755F10011EED0 /* MyRideApp.swift */,
 				FC27B4602E6755F10011EED0 /* ContentView.swift */,
 				FC27B4622E6755F20011EED0 /* Assets.xcassets */,
@@ -125,6 +141,59 @@
 				FC27B47B2E6755F20011EED0 /* MyRideUITestsLaunchTests.swift */,
 			);
 			path = MyRideUITests;
+			sourceTree = "<group>";
+		};
+		FC7C3D5F2E70854E001FD1A0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FC7C3D642E7085B1001FD1A0 /* Pages */,
+				FC7C3D632E708595001FD1A0 /* Templates */,
+				FC7C3D622E70858B001FD1A0 /* Organisms */,
+				FC7C3D612E70857F001FD1A0 /* Molecules */,
+				FC7C3D602E708577001FD1A0 /* Atoms */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FC7C3D602E708577001FD1A0 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				FC7C3D652E708757001FD1A0 /* A_TextInput.swift */,
+				FC7C3D672E70877A001FD1A0 /* A_Button.swift */,
+				FC7C3D712E708902001FD1A0 /* A_Color.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		FC7C3D612E70857F001FD1A0 /* Molecules */ = {
+			isa = PBXGroup;
+			children = (
+				FC7C3D692E7087C2001FD1A0 /* M_EmailField.swift */,
+				FC7C3D6B2E7087DD001FD1A0 /* M_PasswordField.swift */,
+			);
+			path = Molecules;
+			sourceTree = "<group>";
+		};
+		FC7C3D622E70858B001FD1A0 /* Organisms */ = {
+			isa = PBXGroup;
+			children = (
+				FC7C3D6D2E7087F4001FD1A0 /* O_LoginForm.swift */,
+			);
+			path = Organisms;
+			sourceTree = "<group>";
+		};
+		FC7C3D632E708595001FD1A0 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		FC7C3D642E7085B1001FD1A0 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +327,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC27B4612E6755F10011EED0 /* ContentView.swift in Sources */,
+				FC7C3D722E708902001FD1A0 /* A_Color.swift in Sources */,
+				FC7C3D6E2E7087F4001FD1A0 /* O_LoginForm.swift in Sources */,
+				FC7C3D682E70877A001FD1A0 /* A_Button.swift in Sources */,
 				FC27B45F2E6755F10011EED0 /* MyRideApp.swift in Sources */,
+				FC7C3D662E708757001FD1A0 /* A_TextInput.swift in Sources */,
+				FC7C3D6A2E7087C2001FD1A0 /* M_EmailField.swift in Sources */,
+				FC7C3D702E708820001FD1A0 /* LoginView.swift in Sources */,
+				FC7C3D6C2E7087DD001FD1A0 /* M_PasswordField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
