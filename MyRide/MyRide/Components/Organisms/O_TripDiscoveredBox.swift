@@ -28,7 +28,7 @@ struct TripDiscoveredBox: View {
                     .stroke(Color.black, lineWidth: 1)
             )
             HStack {
-                SummaryText(text: "Last Updated", isTitle: false).fontWeight(.semibold)
+                SummaryText(text: "Last Updated:", isTitle: false).fontWeight(.semibold)
                 SummaryText(text: LastUpdated, isTitle: false)
             }.italic()
         }
