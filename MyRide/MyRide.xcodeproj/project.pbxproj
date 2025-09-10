@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC08C7472E7124A1009A8F36 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08C7462E7124A1009A8F36 /* DashboardView.swift */; };
+		FC08C7492E7124F9009A8F36 /* O_SummaryBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08C7482E7124F9009A8F36 /* O_SummaryBox.swift */; };
+		FC08C74B2E712E2E009A8F36 /* A_SummaryText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08C74A2E712E2E009A8F36 /* A_SummaryText.swift */; };
+		FC08C74D2E713AF5009A8F36 /* A_Heading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08C74C2E713AF5009A8F36 /* A_Heading.swift */; };
 		FC27B45F2E6755F10011EED0 /* MyRideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27B45E2E6755F10011EED0 /* MyRideApp.swift */; };
 		FC27B4612E6755F10011EED0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27B4602E6755F10011EED0 /* ContentView.swift */; };
 		FC27B4632E6755F20011EED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC27B4622E6755F20011EED0 /* Assets.xcassets */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC08C7462E7124A1009A8F36 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		FC08C7482E7124F9009A8F36 /* O_SummaryBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = O_SummaryBox.swift; sourceTree = "<group>"; };
+		FC08C74A2E712E2E009A8F36 /* A_SummaryText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_SummaryText.swift; sourceTree = "<group>"; };
+		FC08C74C2E713AF5009A8F36 /* A_Heading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_Heading.swift; sourceTree = "<group>"; };
 		FC27B45B2E6755F10011EED0 /* MyRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC27B45E2E6755F10011EED0 /* MyRideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRideApp.swift; sourceTree = "<group>"; };
 		FC27B4602E6755F10011EED0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC08C7432E7120CA009A8F36 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				FC7C3D6F2E708820001FD1A0 /* LoginView.swift */,
+				FC08C7462E7124A1009A8F36 /* DashboardView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		FC27B4522E6755F10011EED0 = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +125,7 @@
 		FC27B45D2E6755F10011EED0 /* MyRide */ = {
 			isa = PBXGroup;
 			children = (
-				FC7C3D6F2E708820001FD1A0 /* LoginView.swift */,
+				FC08C7432E7120CA009A8F36 /* Pages */,
 				FC7C3D5F2E70854E001FD1A0 /* Components */,
 				FC27B45E2E6755F10011EED0 /* MyRideApp.swift */,
 				FC27B4602E6755F10011EED0 /* ContentView.swift */,
@@ -161,6 +178,8 @@
 				FC7C3D652E708757001FD1A0 /* A_TextInput.swift */,
 				FC7C3D672E70877A001FD1A0 /* A_Button.swift */,
 				FC7C3D712E708902001FD1A0 /* A_Color.swift */,
+				FC08C74A2E712E2E009A8F36 /* A_SummaryText.swift */,
+				FC08C74C2E713AF5009A8F36 /* A_Heading.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -178,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				FC7C3D6D2E7087F4001FD1A0 /* O_LoginForm.swift */,
+				FC08C7482E7124F9009A8F36 /* O_SummaryBox.swift */,
 			);
 			path = Organisms;
 			sourceTree = "<group>";
@@ -331,8 +351,12 @@
 				FC7C3D6E2E7087F4001FD1A0 /* O_LoginForm.swift in Sources */,
 				FC7C3D682E70877A001FD1A0 /* A_Button.swift in Sources */,
 				FC27B45F2E6755F10011EED0 /* MyRideApp.swift in Sources */,
+				FC08C7492E7124F9009A8F36 /* O_SummaryBox.swift in Sources */,
 				FC7C3D662E708757001FD1A0 /* A_TextInput.swift in Sources */,
+				FC08C74D2E713AF5009A8F36 /* A_Heading.swift in Sources */,
 				FC7C3D6A2E7087C2001FD1A0 /* M_EmailField.swift in Sources */,
+				FC08C7472E7124A1009A8F36 /* DashboardView.swift in Sources */,
+				FC08C74B2E712E2E009A8F36 /* A_SummaryText.swift in Sources */,
 				FC7C3D702E708820001FD1A0 /* LoginView.swift in Sources */,
 				FC7C3D6C2E7087DD001FD1A0 /* M_PasswordField.swift in Sources */,
 			);
