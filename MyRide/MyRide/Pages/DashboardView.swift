@@ -10,6 +10,7 @@ import SwiftUI
 struct DashboardView: View {
     var body: some View {
         SummaryBox(TotalVehicle: 2, TotalService: 2, TotalClean: 2, TotalDriver: 0, TotalTrip: 6)
+        TripDiscoveredBox(TotalTrip: 6, TotalDistance: 50.30, LastUpdated: "13-02-2025 10:20:10")
     }
 }
 
