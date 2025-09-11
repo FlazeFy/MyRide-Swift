@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TripDiscoveredBox: View {
     var TotalTrip: Int
-    var TotalDistance: Float
+    var TotalDistance: String
     var LastUpdated: String
     
     var body: some View {

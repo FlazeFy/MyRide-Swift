@@ -32,7 +32,6 @@ struct LoginView: View {
                     
                    
                     LoginForm(username: $username, password: $password)
-                  
                 }
                 .padding()
                 .background(Color.white)

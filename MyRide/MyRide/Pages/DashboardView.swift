@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DashboardView: View {
     @State private var summary: SummaryResponse? = nil
+    @State private var tripDiscovered: FetchTripDiscovered? = nil
     @State private var isLoading = true
     @State private var showError = false
 
@@ -16,40 +17,53 @@ struct DashboardView: View {
         VStack {
             if isLoading {
                 ProgressView("Loading Summary...")
-            } else if let s = summary {
-                SummaryBox(
-                    TotalVehicle: s.totalVehicle,
-                    TotalService: s.totalService,
-                    TotalClean: s.totalClean,
-                    TotalDriver: s.totalDriver,
-                    TotalTrip: s.totalTrip
-                )
-                TripDiscoveredBox(
-                    TotalTrip: s.totalTrip,
-                    TotalDistance: 50.30,
-                    LastUpdated: "2025-09-17 14:42:57"
-                )
-                NextReminderBox(
-                    RemindAt: "2025-09-17 14:42:57",
-                    ReminderBody: "Lorem Ipsum"
-                )
             } else {
-                Text("Failed to load summary")
-                    .foregroundColor(.red)
+                if let s = summary {
+                    SummaryBox(
+                        TotalVehicle: s.totalVehicle,
+                        TotalService: s.totalService,
+                        TotalClean: s.totalClean,
+                        TotalDriver: s.totalDriver,
+                        TotalTrip: s.totalTrip
+                    )
+                }
+                if let t = tripDiscovered {
+                    TripDiscoveredBox(
+                        TotalTrip: t.totalTrip,
+                        TotalDistance: t.distanceKM,
+                        LastUpdated: t.lastUpdate
+                    )
+                }
             }
         }
         .onAppear {
+            let group = DispatchGroup()
+            isLoading = true
+            showError = false
+
+            group.enter()
             R_Stats.shared.getSummary { res in
                 DispatchQueue.main.async {
-                    if let res = res {
-                        self.summary = res
-                        self.isLoading = false
-                    } else {
-                        self.isLoading = false
-                        self.showError = true
-                    }
+                    self.summary = res
+                    group.leave()
                 }
             }
+
+            group.enter()
+            R_Stats.shared.getTripDiscovered { res in
+                DispatchQueue.main.async {
+                    self.tripDiscovered = res
+                    group.leave()
+                }
+            }
+            
+            group.notify(queue: .main) {
+                self.isLoading = false
+                if summary == nil || tripDiscovered == nil {
+                    self.showError = true
+                }
+            }
+
         }
         .navigationBarBackButtonHidden(true)
         .alert("Error", isPresented: $showError) {
