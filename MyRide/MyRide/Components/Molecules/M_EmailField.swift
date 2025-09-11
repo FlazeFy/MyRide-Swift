@@ -9,14 +9,14 @@ import Foundation
 import SwiftUI
 
 struct EmailField: View {
-    @Binding var email: String
+    @Binding var username: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             TextInputField(
                 title: "Email address / Username",
                 placeholder: "ex : jhondoe@gmail.com",
-                text: $email
+                text: $username
             )
             
             Text("We'll never share your email with anyone else")

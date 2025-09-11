@@ -12,6 +12,7 @@ struct DashboardView: View {
         SummaryBox(TotalVehicle: 2, TotalService: 2, TotalClean: 2, TotalDriver: 0, TotalTrip: 6)
         TripDiscoveredBox(TotalTrip: 6, TotalDistance: 50.30, LastUpdated: "2025-09-17 14:42:57")
         NextReminderBox(RemindAt: "2025-09-17 14:42:57", ReminderBody: "Lorem Ipsum")
+        .navigationBarBackButtonHidden(true)
     }
 }
 

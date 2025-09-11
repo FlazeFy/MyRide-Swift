@@ -27,6 +27,9 @@
 		FC7C3D6E2E7087F4001FD1A0 /* O_LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3D6D2E7087F4001FD1A0 /* O_LoginForm.swift */; };
 		FC7C3D702E708820001FD1A0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3D6F2E708820001FD1A0 /* LoginView.swift */; };
 		FC7C3D722E708902001FD1A0 /* A_Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3D712E708902001FD1A0 /* A_Color.swift */; };
+		FCB3272F2E71E0310066C7AF /* R_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3272E2E71E0310066C7AF /* R_Auth.swift */; };
+		FCB3273C2E72478F0066C7AF /* M_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3273B2E72478F0066C7AF /* M_Auth.swift */; };
+		FCB3273E2E724A0F0066C7AF /* M_Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3273D2E724A0F0066C7AF /* M_Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,10 @@
 		FC7C3D6D2E7087F4001FD1A0 /* O_LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = O_LoginForm.swift; sourceTree = "<group>"; };
 		FC7C3D6F2E708820001FD1A0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FC7C3D712E708902001FD1A0 /* A_Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_Color.swift; sourceTree = "<group>"; };
+		FCB3272E2E71E0310066C7AF /* R_Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R_Auth.swift; sourceTree = "<group>"; };
+		FCB327362E72454D0066C7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FCB3273B2E72478F0066C7AF /* M_Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Auth.swift; sourceTree = "<group>"; };
+		FCB3273D2E724A0F0066C7AF /* M_Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +136,8 @@
 		FC27B45D2E6755F10011EED0 /* MyRide */ = {
 			isa = PBXGroup;
 			children = (
+				FCB327372E7247510066C7AF /* Modules */,
+				FCB327362E72454D0066C7AF /* Info.plist */,
 				FC08C7432E7120CA009A8F36 /* Pages */,
 				FC7C3D5F2E70854E001FD1A0 /* Components */,
 				FC27B45E2E6755F10011EED0 /* MyRideApp.swift */,
@@ -167,7 +176,6 @@
 		FC7C3D5F2E70854E001FD1A0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FC7C3D642E7085B1001FD1A0 /* Pages */,
 				FC7C3D632E708595001FD1A0 /* Templates */,
 				FC7C3D622E70858B001FD1A0 /* Organisms */,
 				FC7C3D612E70857F001FD1A0 /* Molecules */,
@@ -215,11 +223,30 @@
 			path = Templates;
 			sourceTree = "<group>";
 		};
-		FC7C3D642E7085B1001FD1A0 /* Pages */ = {
+		FCB327372E7247510066C7AF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FCB3273A2E72477D0066C7AF /* Repository */,
+				FCB327392E7247770066C7AF /* Models */,
 			);
-			path = Pages;
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FCB327392E7247770066C7AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3273B2E72478F0066C7AF /* M_Auth.swift */,
+				FCB3273D2E724A0F0066C7AF /* M_Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FCB3273A2E72477D0066C7AF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FCB3272E2E71E0310066C7AF /* R_Auth.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +381,7 @@
 			files = (
 				FC27B4612E6755F10011EED0 /* ContentView.swift in Sources */,
 				FC7C3D722E708902001FD1A0 /* A_Color.swift in Sources */,
+				FCB3273C2E72478F0066C7AF /* M_Auth.swift in Sources */,
 				FC08C74F2E7155CF009A8F36 /* O_TripDiscoveredBox.swift in Sources */,
 				FC7C3D6E2E7087F4001FD1A0 /* O_LoginForm.swift in Sources */,
 				FC7C3D682E70877A001FD1A0 /* A_Button.swift in Sources */,
@@ -362,10 +390,12 @@
 				FC7C3D662E708757001FD1A0 /* A_TextInput.swift in Sources */,
 				FC08C74D2E713AF5009A8F36 /* A_Heading.swift in Sources */,
 				FC7C3D6A2E7087C2001FD1A0 /* M_EmailField.swift in Sources */,
+				FCB3272F2E71E0310066C7AF /* R_Auth.swift in Sources */,
 				FC08C7512E7163C6009A8F36 /* O_NextReminderBox.swift in Sources */,
 				FC08C7472E7124A1009A8F36 /* DashboardView.swift in Sources */,
 				FC08C74B2E712E2E009A8F36 /* A_SummaryText.swift in Sources */,
 				FC7C3D702E708820001FD1A0 /* LoginView.swift in Sources */,
+				FCB3273E2E724A0F0066C7AF /* M_Response.swift in Sources */,
 				FC7C3D6C2E7087DD001FD1A0 /* M_PasswordField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +468,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -455,6 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -501,6 +533,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DONT_GENERATE_INFOPLIST_FILE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -512,6 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -532,6 +566,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MyRide/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyRide/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -560,6 +595,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MyRide/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyRide/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
