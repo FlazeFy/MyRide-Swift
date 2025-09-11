@@ -55,10 +55,12 @@ class AuthRepository {
                 do {
                     let decoded = try JSONDecoder().decode(LoginResponse.self, from: data)
                     
-                    UserDefaults.standard.set(decoded.token, forKey: "auth_token")
-                    UserDefaults.standard.set(decoded.role, forKey: "auth_role")
-                    UserDefaults.standard.set(decoded.result.email, forKey: "auth_email")
-                    UserDefaults.standard.set(decoded.result.username, forKey: "auth_username")
+                    UserSession.shared.saveSession(
+                        token: decoded.token,
+                        role: String(decoded.role),
+                        email: decoded.result.email,
+                        username: decoded.result.username
+                    )
                     
                     completion(.success(decoded))
                 } catch {

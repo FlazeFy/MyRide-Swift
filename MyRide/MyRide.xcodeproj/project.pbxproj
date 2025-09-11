@@ -30,6 +30,9 @@
 		FCB3272F2E71E0310066C7AF /* R_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3272E2E71E0310066C7AF /* R_Auth.swift */; };
 		FCB3273C2E72478F0066C7AF /* M_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3273B2E72478F0066C7AF /* M_Auth.swift */; };
 		FCB3273E2E724A0F0066C7AF /* M_Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3273D2E724A0F0066C7AF /* M_Response.swift */; };
+		FCB327402E72679F0066C7AF /* R_Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3273F2E72679F0066C7AF /* R_Stats.swift */; };
+		FCB327422E7269280066C7AF /* M_Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB327412E7269280066C7AF /* M_Stats.swift */; };
+		FCB327482E726B500066C7AF /* S_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB327472E726B500066C7AF /* S_User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		FCB327362E72454D0066C7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FCB3273B2E72478F0066C7AF /* M_Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Auth.swift; sourceTree = "<group>"; };
 		FCB3273D2E724A0F0066C7AF /* M_Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Response.swift; sourceTree = "<group>"; };
+		FCB3273F2E72679F0066C7AF /* R_Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R_Stats.swift; sourceTree = "<group>"; };
+		FCB327412E7269280066C7AF /* M_Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Stats.swift; sourceTree = "<group>"; };
+		FCB327472E726B500066C7AF /* S_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S_User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +232,7 @@
 		FCB327372E7247510066C7AF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FCB327442E726B320066C7AF /* Session */,
 				FCB3273A2E72477D0066C7AF /* Repository */,
 				FCB327392E7247770066C7AF /* Models */,
 			);
@@ -237,6 +244,7 @@
 			children = (
 				FCB3273B2E72478F0066C7AF /* M_Auth.swift */,
 				FCB3273D2E724A0F0066C7AF /* M_Response.swift */,
+				FCB327412E7269280066C7AF /* M_Stats.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,8 +253,17 @@
 			isa = PBXGroup;
 			children = (
 				FCB3272E2E71E0310066C7AF /* R_Auth.swift */,
+				FCB3273F2E72679F0066C7AF /* R_Stats.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		FCB327442E726B320066C7AF /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				FCB327472E726B500066C7AF /* S_User.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +399,7 @@
 				FC27B4612E6755F10011EED0 /* ContentView.swift in Sources */,
 				FC7C3D722E708902001FD1A0 /* A_Color.swift in Sources */,
 				FCB3273C2E72478F0066C7AF /* M_Auth.swift in Sources */,
+				FCB327402E72679F0066C7AF /* R_Stats.swift in Sources */,
 				FC08C74F2E7155CF009A8F36 /* O_TripDiscoveredBox.swift in Sources */,
 				FC7C3D6E2E7087F4001FD1A0 /* O_LoginForm.swift in Sources */,
 				FC7C3D682E70877A001FD1A0 /* A_Button.swift in Sources */,
@@ -396,7 +414,9 @@
 				FC08C74B2E712E2E009A8F36 /* A_SummaryText.swift in Sources */,
 				FC7C3D702E708820001FD1A0 /* LoginView.swift in Sources */,
 				FCB3273E2E724A0F0066C7AF /* M_Response.swift in Sources */,
+				FCB327482E726B500066C7AF /* S_User.swift in Sources */,
 				FC7C3D6C2E7087DD001FD1A0 /* M_PasswordField.swift in Sources */,
+				FCB327422E7269280066C7AF /* M_Stats.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
