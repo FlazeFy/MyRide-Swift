@@ -10,6 +10,7 @@ import SwiftUI
 struct DashboardView: View {
     @State private var summary: SummaryResponse? = nil
     @State private var tripDiscovered: FetchTripDiscovered? = nil
+    @State private var nextReminder: FetchNextReminder? = nil
     @State private var isLoading = true
     @State private var showError = false
 
@@ -34,6 +35,12 @@ struct DashboardView: View {
                         LastUpdated: t.lastUpdate
                     )
                 }
+                if let r = nextReminder {
+                    NextReminderBox(
+                        RemindAt: r.remindAt,
+                        ReminderBody: r.reminderBody ?? "-"
+                    )
+                }
             }
         }
         .onAppear {
@@ -50,16 +57,24 @@ struct DashboardView: View {
             }
 
             group.enter()
-            R_Stats.shared.getTripDiscovered { res in
+            R_Trip.shared.getTripDiscovered { res in
                 DispatchQueue.main.async {
                     self.tripDiscovered = res
                     group.leave()
                 }
             }
             
+            group.enter()
+            R_Reminder.shared.getNextReminder { res in
+                DispatchQueue.main.async {
+                    self.nextReminder = res
+                    group.leave()
+                }
+            }
+            
             group.notify(queue: .main) {
                 self.isLoading = false
-                if summary == nil || tripDiscovered == nil {
+                if summary == nil || tripDiscovered == nil || nextReminder == nil {
                     self.showError = true
                 }
             }

@@ -1,5 +1,5 @@
 //
-//  R_Stats.swift
+//  R_Reminder.swift
 //  MyRide
 //
 //  Created by Leonardho R Sitanggang on 11/09/25.
@@ -7,28 +7,28 @@
 
 import Foundation
 
-class R_Stats {
-    static let shared = R_Stats()
+class R_Reminder {
+    static let shared = R_Reminder()
     private init() {}
     private let baseURL = "http://127.0.0.1:8000/api/v1"
-    private let ctx = "summary_apps_private"
-    private let lastHitKey = "last-hit-summary_apps_private"
-    private let fetchRestTime: TimeInterval = 180 
+    private let ctx = "next_reminder_private"
+    private let lastHitKey = "last-hit-next_reminder_private"
+    private let fetchRestTime: TimeInterval = 180
     
-    func getSummary(completion: @escaping (SummaryResponse?) -> Void) {
+    func getNextReminder(completion: @escaping (FetchNextReminder?) -> Void) {
         let defaults = UserDefaults.standard
         let now = Date().timeIntervalSince1970
         
         if let lastHit = defaults.double(forKey: lastHitKey) as Double?,
            now - lastHit < fetchRestTime,
            let cachedData = defaults.data(forKey: ctx),
-           let summary = try? JSONDecoder().decode(SummaryResponse.self, from: cachedData) {
+           let summary = try? JSONDecoder().decode(FetchNextReminder.self, from: cachedData) {
             
             completion(summary)
             return
         }
         
-        guard let url = URL(string: "\(baseURL)/stats/summary") else {
+        guard let url = URL(string: "\(baseURL)/reminder/next") else {
             completion(nil)
             return
         }
@@ -46,19 +46,19 @@ class R_Stats {
             
             do {
                 struct ApiResponse: Codable {
-                    let data: SummaryResponse
+                    let data: FetchNextReminder
                 }
                 
                 let decoded = try JSONDecoder().decode(ApiResponse.self, from: data)
-                let summary = decoded.data
+                let data = decoded.data
                 
                 // Save cache
-                if let encoded = try? JSONEncoder().encode(summary) {
+                if let encoded = try? JSONEncoder().encode(data) {
                     defaults.set(encoded, forKey: self.ctx)
                     defaults.set(now, forKey: self.lastHitKey)
                 }
                 
-                completion(summary)
+                completion(data)
             } catch {
                 completion(nil)
             }

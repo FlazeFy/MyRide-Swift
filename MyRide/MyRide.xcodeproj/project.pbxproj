@@ -33,6 +33,10 @@
 		FCB327402E72679F0066C7AF /* R_Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3273F2E72679F0066C7AF /* R_Stats.swift */; };
 		FCB327422E7269280066C7AF /* M_Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB327412E7269280066C7AF /* M_Stats.swift */; };
 		FCB327482E726B500066C7AF /* S_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB327472E726B500066C7AF /* S_User.swift */; };
+		FCB3274A2E72BF580066C7AF /* M_Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB327492E72BF580066C7AF /* M_Trip.swift */; };
+		FCB3274C2E72BF640066C7AF /* M_Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3274B2E72BF640066C7AF /* M_Reminder.swift */; };
+		FCB3274E2E72C02B0066C7AF /* R_Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3274D2E72C02B0066C7AF /* R_Trip.swift */; };
+		FCB327502E72C03A0066C7AF /* R_Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3274F2E72C03A0066C7AF /* R_Reminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		FCB3273F2E72679F0066C7AF /* R_Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R_Stats.swift; sourceTree = "<group>"; };
 		FCB327412E7269280066C7AF /* M_Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Stats.swift; sourceTree = "<group>"; };
 		FCB327472E726B500066C7AF /* S_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S_User.swift; sourceTree = "<group>"; };
+		FCB327492E72BF580066C7AF /* M_Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Trip.swift; sourceTree = "<group>"; };
+		FCB3274B2E72BF640066C7AF /* M_Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Reminder.swift; sourceTree = "<group>"; };
+		FCB3274D2E72C02B0066C7AF /* R_Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R_Trip.swift; sourceTree = "<group>"; };
+		FCB3274F2E72C03A0066C7AF /* R_Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R_Reminder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +253,8 @@
 				FCB3273B2E72478F0066C7AF /* M_Auth.swift */,
 				FCB3273D2E724A0F0066C7AF /* M_Response.swift */,
 				FCB327412E7269280066C7AF /* M_Stats.swift */,
+				FCB327492E72BF580066C7AF /* M_Trip.swift */,
+				FCB3274B2E72BF640066C7AF /* M_Reminder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,6 +264,8 @@
 			children = (
 				FCB3272E2E71E0310066C7AF /* R_Auth.swift */,
 				FCB3273F2E72679F0066C7AF /* R_Stats.swift */,
+				FCB3274D2E72C02B0066C7AF /* R_Trip.swift */,
+				FCB3274F2E72C03A0066C7AF /* R_Reminder.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -401,15 +413,18 @@
 				FCB3273C2E72478F0066C7AF /* M_Auth.swift in Sources */,
 				FCB327402E72679F0066C7AF /* R_Stats.swift in Sources */,
 				FC08C74F2E7155CF009A8F36 /* O_TripDiscoveredBox.swift in Sources */,
+				FCB327502E72C03A0066C7AF /* R_Reminder.swift in Sources */,
 				FC7C3D6E2E7087F4001FD1A0 /* O_LoginForm.swift in Sources */,
 				FC7C3D682E70877A001FD1A0 /* A_Button.swift in Sources */,
 				FC27B45F2E6755F10011EED0 /* MyRideApp.swift in Sources */,
 				FC08C7492E7124F9009A8F36 /* O_SummaryBox.swift in Sources */,
 				FC7C3D662E708757001FD1A0 /* A_TextInput.swift in Sources */,
+				FCB3274A2E72BF580066C7AF /* M_Trip.swift in Sources */,
 				FC08C74D2E713AF5009A8F36 /* A_Heading.swift in Sources */,
 				FC7C3D6A2E7087C2001FD1A0 /* M_EmailField.swift in Sources */,
 				FCB3272F2E71E0310066C7AF /* R_Auth.swift in Sources */,
 				FC08C7512E7163C6009A8F36 /* O_NextReminderBox.swift in Sources */,
+				FCB3274E2E72C02B0066C7AF /* R_Trip.swift in Sources */,
 				FC08C7472E7124A1009A8F36 /* DashboardView.swift in Sources */,
 				FC08C74B2E712E2E009A8F36 /* A_SummaryText.swift in Sources */,
 				FC7C3D702E708820001FD1A0 /* LoginView.swift in Sources */,
@@ -417,6 +432,7 @@
 				FCB327482E726B500066C7AF /* S_User.swift in Sources */,
 				FC7C3D6C2E7087DD001FD1A0 /* M_PasswordField.swift in Sources */,
 				FCB327422E7269280066C7AF /* M_Stats.swift in Sources */,
+				FCB3274C2E72BF640066C7AF /* M_Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
