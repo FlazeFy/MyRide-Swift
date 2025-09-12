@@ -84,7 +84,7 @@ struct DashboardView: View {
         .alert("Error", isPresented: $showError) {
             Button("OK", role: .cancel) { }
         } message: {
-            Text("Failed to get the summary")
+            Text("Failed to get the data")
         }
     }
 }

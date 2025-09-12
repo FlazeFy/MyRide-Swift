@@ -11,11 +11,12 @@ import SwiftUI
 struct SummaryText: View {
     var text: String
     var isTitle: Bool = false
+    var fontSize: Font? = nil
     
     var body: some View {
         if isTitle {
             Text(text)
-                .font(.title)
+                .font(fontSize ?? .title)
                 .fontWeight(.bold)
         } else {
             Text(text)
